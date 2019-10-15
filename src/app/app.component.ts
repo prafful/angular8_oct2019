@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  selector: 'root-component',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'angular001';
+
+export class RootComponent {
+  title = 'Angular 8';
+  name = 'Prafful Daga';
+  location = 'Bengaluru';
+  country = 'India';
 }
