@@ -1,0 +1,44 @@
+<p>directive works!</p>
+
+Friends: {{ friends }}
+<!--use *ngFor on element which is repeating-->
+<ol>
+    <li *ngFor="let frn of friends; let counter = index">
+        {{frn}} at : {{counter}}
+    </li>
+</ol>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>S. no</th>
+            <th>Name</th>
+            <th>Topic</th>
+            <th>Duration</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let t of training; let sno = index">
+            <td>{{sno + 1}}</td>
+            <td>{{t.name}}</td>
+            <td>{{t.topic}}</td>
+            <td>{{t.duration}}</td>
+        </tr>
+      
+    </tbody>
+
+
+</table>
+<br>
+List of trainings in OL: {{display}}
+<ol *ngIf="display">
+    <li *ngFor="let t of training">
+        {{t.name}} for {{t.topic}}
+    </li>
+</ol>
+<br>
+<!-- in angular, you have 2 rules to work with events
+    1. remove "on" from all events
+    2. wrap event in round brackets
+-->
+<button (click)="somefunction()">Change display variable</button>

@@ -9,11 +9,24 @@ import { ThirdComponent } from './third/third.component';
 import { FourthComponent } from './custom/fourth/fourth.component';
 import { FifthComponent } from './custom/sub/fifth/fifth.component';
 import { SixthComponent } from './custom/sub/sixth/sixth.component';
+import { DirectiveComponent } from './directives/directive/directive.component';
 
 @NgModule(
   {
-  declarations: [ RootComponent, FirstComponent, SecondComponent, ThirdComponent, FourthComponent, FifthComponent, SixthComponent ],
-  imports: [ BrowserModule, AppRoutingModule  ],
+  declarations: [ 
+                  RootComponent, 
+                  FirstComponent, 
+                  SecondComponent, 
+                  ThirdComponent, 
+                  FourthComponent, 
+                  FifthComponent, 
+                  SixthComponent, 
+                  DirectiveComponent 
+                ],
+  imports: [ 
+            BrowserModule, 
+            AppRoutingModule  
+          ],
   providers: [],
   bootstrap: [RootComponent]
 }
