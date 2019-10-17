@@ -10,6 +10,8 @@ import { FourthComponent } from './custom/fourth/fourth.component';
 import { FifthComponent } from './custom/sub/fifth/fifth.component';
 import { SixthComponent } from './custom/sub/sixth/sixth.component';
 import { DirectiveComponent } from './directives/directive/directive.component';
+import { PipecomponentComponent } from './pipes/inbuilt/pipecomponent/pipecomponent.component';
+import { SortstringPipe } from './pipes/custom/sortstring.pipe';
 
 @NgModule(
   {
@@ -21,7 +23,9 @@ import { DirectiveComponent } from './directives/directive/directive.component';
                   FourthComponent, 
                   FifthComponent, 
                   SixthComponent, 
-                  DirectiveComponent 
+                  DirectiveComponent, 
+                  PipecomponentComponent, 
+                  SortstringPipe 
                 ],
   imports: [ 
             BrowserModule, 

@@ -13,17 +13,17 @@ export class DirectiveComponent implements OnInit {
     {
       "name":"prafful",
       "topic":"angular 8",
-      duration:24
+      "duration":24
     },
     {
       "name":"OBB",
       "topic":"Spring Boot",
-      duration:32
+      "duration":32
     },
     {
       "name":"PK",
       "topic":"Machine Learning",
-      duration:40
+      "duration":40
     }
 
   ]

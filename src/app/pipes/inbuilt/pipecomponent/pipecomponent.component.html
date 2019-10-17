@@ -1,0 +1,16 @@
+<p>pipecomponent works!</p>
+
+Name1 original: {{name1}}
+<br>
+Name1 uppercase:{{name1 | uppercase }}
+<br>
+Name2: {{name2 | lowercase}}
+<br>
+Salary: {{salary | currency:"EUR"}}
+<br>
+Date:
+<br>
+{{mydate | date:'hh:mm:ss' | uppercase}}
+<hr>
+<h3>Custom Pipe</h3>
+Friends: {{friends | sortstring}}

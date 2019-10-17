@@ -3,21 +3,34 @@ import { Routes, RouterModule } from '@angular/router';
 import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
 import { DirectiveComponent } from "./directives/directive/directive.component";
+import { PipecomponentComponent } from './pipes/inbuilt/pipecomponent/pipecomponent.component';
+
+
 
 
 const routes: Routes = [
   {
-    path:"one",
+    path:"",
+    redirectTo:"second",
+    pathMatch:"full"
+  },
+  {
+    path:"first",
     component:FirstComponent
   },
   {
-    path:"two",
+    path:"second",
     component:SecondComponent
   },
   {
-    path:"three",
+    path:"directive",
     component:DirectiveComponent
+  },
+  {
+    path:"pipe",
+    component:PipecomponentComponent
   }
+
 ];
 
 @NgModule({
