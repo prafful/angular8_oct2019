@@ -1,0 +1,15 @@
+<h1>Template Driven Form</h1>
+{{name}}
+<br>
+Form: {{myform}}
+<br>
+
+<form #myform="ngForm" >
+    <label>Name: </label>
+    <input type="text" name="full_name" [(ngModel)]="fname"> {{fname}}
+    <br>
+    <label>Score: </label>
+    <input type="number" name="my_score" [(ngModel)]="myscore"> {{myscore}}
+    <br>
+    <button (click)="submitForm(myform.value)"> Add</button>
+</form>
