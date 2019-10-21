@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from "@angular/forms";
+import { ReactiveFormsModule } from "@angular/forms";
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -24,6 +25,7 @@ import { Family2Component } from './family/family2/family2/family2.component';
 import { Father2Component } from './family/family2/father2/father2.component';
 import { Mother2Component } from './family/family2/mother2/mother2.component';
 import { Child2Component } from './family/family2/child2/child2.component';
+import { ReactiveComponent } from './forms/reactive/reactive.component';
 //import { SortstringPipe } from './pipes/custom/sortstring.pipe';
 
 @NgModule(
@@ -47,12 +49,14 @@ import { Child2Component } from './family/family2/child2/child2.component';
                   Family2Component, 
                   Father2Component, 
                   Mother2Component, 
-                  Child2Component
+                  Child2Component, 
+                  ReactiveComponent
                 ],
   imports: [ 
             BrowserModule, 
             AppRoutingModule,
-            FormsModule 
+            FormsModule ,
+            ReactiveFormsModule
           ],
   providers: [],
   bootstrap: [RootComponent]

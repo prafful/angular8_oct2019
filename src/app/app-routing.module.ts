@@ -7,6 +7,7 @@ import { PipecomponentComponent } from './pipes/inbuilt/pipecomponent/pipecompon
 import { TemplateComponent } from './forms/template/template.component';
 import { Family1Component } from './family/family1/family1/family1.component';
 import { Family2Component } from './family/family2/family2/family2.component';
+import { ReactiveComponent } from './forms/reactive/reactive.component';
 
 
 
@@ -44,6 +45,10 @@ const routes: Routes = [
   {
     path:"family2",
     component:Family2Component
+  },
+  {
+    path:"reactiveform",
+    component:ReactiveComponent
   }
 
 ];

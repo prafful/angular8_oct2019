@@ -1,0 +1,11 @@
+<h1>Reactie Form</h1>
+
+<form [formGroup]="reactiveFriend" >
+    <label>Name: </label>
+    <input type="text"  formControlName="full_name"> 
+    <br>
+    <label>Score: </label>
+    <input type="number" formControlName="my_score"> 
+    <br>
+    <button (click)="submitForm(reactiveFriend)" [disabled]="reactiveFriend.invalid"> Add</button>
+</form>
