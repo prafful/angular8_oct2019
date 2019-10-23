@@ -8,6 +8,9 @@ import { TemplateComponent } from './forms/template/template.component';
 import { Family1Component } from './family/family1/family1/family1.component';
 import { Family2Component } from './family/family2/family2/family2.component';
 import { ReactiveComponent } from './forms/reactive/reactive.component';
+import { Local1Component } from './consume/local1/local1.component';
+import { Local2Component } from './consume/local2/local2.component';
+import { RemoteComponent } from './consume/remote/remote.component';
 
 
 
@@ -49,6 +52,18 @@ const routes: Routes = [
   {
     path:"reactiveform",
     component:ReactiveComponent
+  },
+  {
+    path:"local1",
+    component:Local1Component
+  },
+  {
+    path:"local2",
+    component:Local2Component
+  },
+  {
+    path:"remote",
+    component:RemoteComponent
   }
 
 ];

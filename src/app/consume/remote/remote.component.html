@@ -1,0 +1,37 @@
+<p>remote works!!!</p>
+
+Friends: {{friends}}
+<br>
+Message: {{message}}
+<ol>
+    <li *ngFor="let f of friends">
+        {{f.name}}
+    </li>
+</ol>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>S.no</th>
+            <th>Name</th>
+            <th>Id</th>
+            <th colspan="2">Actions</th>
+        </tr>
+    </thead>
+<tbody>
+    <tr *ngFor="let f of friends; let counter = index">
+        <td>{{counter+1}}</td>
+        <td>{{f.name}}</td>
+        <td>{{f.id}}</td>
+        <td>
+            <button (click)="deleteFriendById(f.id)">Delete</button>
+        </td>
+        <td>
+            <button>Update</button>
+        </td>
+    </tr>
+</tbody>
+
+
+
+</table>
