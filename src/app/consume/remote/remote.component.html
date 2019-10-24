@@ -27,11 +27,22 @@ Message: {{message}}
             <button (click)="deleteFriendById(f.id)">Delete</button>
         </td>
         <td>
-            <button>Update</button>
+            <button (click)="captureFriend(f.id)">Update</button>
         </td>
     </tr>
 </tbody>
-
-
-
 </table>
+<hr>
+<h4>Add Friend</h4>
+<form #friendForm="ngForm">
+    <label>Name: </label>
+    <input type="text" name="name" [(ngModel)]="friendName">
+    <button (click)="addFriend(friendForm.value)">Add</button>
+</form>
+<hr>
+<h4>Update Friend</h4>
+<form #friendUpdate="ngForm">
+    <label>Name: </label>
+    <input type="text" name="name" [(ngModel)]="updateFriendName">{{updateFriendName}}
+    <button (click)="updateFriend(friendUpdate.value)">Update</button>
+</form>

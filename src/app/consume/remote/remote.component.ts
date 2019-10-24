@@ -10,6 +10,9 @@ export class RemoteComponent implements OnInit {
 
   friends:any
   message:any = "Some Status"
+  friendName:any
+  updateFriendName:any = "some name..."
+  updateFriendId: any
 
   constructor(private remote: RemoteService) { }
 
@@ -40,6 +43,46 @@ export class RemoteComponent implements OnInit {
     }, (err)=>{
       console.log(err);
     })
+  }
+
+  addFriend(friend){
+    console.log(friend);
+    this.remote.addFriend(friend).subscribe((res)=>{
+      this.message = "Friend Add Success!"
+      this.getAllRemoteFriends()
+      console.log(res);
+    }, (err)=>{
+      this.message = "Friend Add Error!"
+      console.log(err);
+    })
+  }
+
+  captureFriend(id){
+    console.log("Update friend with id: " + id);
+    this.remote.getFriendById(id).subscribe(res => {
+      console.log(res);
+      this.updateFriendName = res.name
+      this.updateFriendId = res.id
+      this.message = "Updating: " + this.updateFriendName
+      console.log("Updating: " + this.updateFriendName);
+    }, err =>{
+      this.message = "Error in updating friend. Did not get friend with given ID! "
+      console.log(err);
+    })
+    
+  }
+
+  updateFriend(uf){
+    this.remote.updateFriend(this.updateFriendId, uf)
+                .subscribe((res) => {
+                  console.log("Friend Update Success");
+                  this.message = "Update: " + res.name + " Success!"
+                  console.log(res);
+                  this.getAllRemoteFriends()
+                }, (err) =>{
+                  this.message = "Update Failure!"
+                  console.log(err);
+                })
   }
 
   /* successFunction(response){
