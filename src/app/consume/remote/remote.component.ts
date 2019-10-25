@@ -60,7 +60,7 @@ export class RemoteComponent implements OnInit {
   captureFriend(id){
     console.log("Update friend with id: " + id);
     this.remote.getFriendById(id).subscribe(res => {
-      console.log(res);
+      console.log(res)
       this.updateFriendName = res.name
       this.updateFriendId = res.id
       this.message = "Updating: " + this.updateFriendName

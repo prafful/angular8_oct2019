@@ -1,20 +1,13 @@
 {
   "fellows": [
     {
-      "name": "Yuko",
+      "name": "Keiko",
       "id": 1
     },
     {
-      "name": "Tuko",
+      "name": "Reik",
+      "location": "Tokyo",
       "id": 2
-    },
-    {
-      "name": "Mika",
-      "id": 3
-    },
-    {
-      "name": "Mesho",
-      "id": 4
     }
   ]
 }

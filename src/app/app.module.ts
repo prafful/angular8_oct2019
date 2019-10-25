@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from "@angular/forms";
 import { ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
-
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 import { AppRoutingModule } from './app-routing.module';
 import { RootComponent } from './app.component';
@@ -30,6 +30,7 @@ import { ReactiveComponent } from './forms/reactive/reactive.component';
 import { Local1Component } from './consume/local1/local1.component';
 import { Local2Component } from './consume/local2/local2.component';
 import { RemoteComponent } from './consume/remote/remote.component';
+import { AnimateComponent } from './animation/animate/animate.component';
 //import { SortstringPipe } from './pipes/custom/sortstring.pipe';
 
 @NgModule(
@@ -56,14 +57,15 @@ import { RemoteComponent } from './consume/remote/remote.component';
                   Child2Component, 
                   ReactiveComponent, 
                   Local1Component, 
-                  Local2Component, RemoteComponent
+                  Local2Component, RemoteComponent, AnimateComponent
                 ],
   imports: [ 
             BrowserModule, 
             AppRoutingModule,
             FormsModule ,
             ReactiveFormsModule,
-            HttpClientModule
+            HttpClientModule,
+            BrowserAnimationsModule
           ],
   providers: [],
   bootstrap: [RootComponent]

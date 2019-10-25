@@ -11,6 +11,7 @@ import { ReactiveComponent } from './forms/reactive/reactive.component';
 import { Local1Component } from './consume/local1/local1.component';
 import { Local2Component } from './consume/local2/local2.component';
 import { RemoteComponent } from './consume/remote/remote.component';
+import { AnimateComponent } from './animation/animate/animate.component';
 
 
 
@@ -64,6 +65,10 @@ const routes: Routes = [
   {
     path:"remote",
     component:RemoteComponent
+  },
+  {
+    path:"animate",
+    component:AnimateComponent
   }
 
 ];
